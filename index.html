@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lillyli-netizen · Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+    <!-- Sidebar Nav -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="avatar">L</div>
+            <div class="sidebar-name">Lillyli-netizen</div>
+            <div class="sidebar-role">AI & CS Student</div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#hero" class="nav-item active" data-target="hero">
+                <span class="nav-icon">›</span> <span class="nav-label">Home</span>
+            </a>
+            <a href="#about" class="nav-item" data-target="about">
+                <span class="nav-icon">›</span> <span class="nav-label">About</span>
+            </a>
+            <a href="#skills" class="nav-item" data-target="skills">
+                <span class="nav-icon">›</span> <span class="nav-label">Skills</span>
+            </a>
+            <a href="#projects" class="nav-item" data-target="projects">
+                <span class="nav-icon">›</span> <span class="nav-label">Projects</span>
+            </a>
+            <a href="#contact" class="nav-item" data-target="contact">
+                <span class="nav-icon">›</span> <span class="nav-label">Contact</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                <span class="toggle-icon">☀</span>
+                <span class="toggle-label">Light</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Hero -->
+        <section class="section hero" id="hero">
+            <div class="hero-tag">// hello world</div>
+            <h1 class="hero-title">
+                I build things with
+                <span class="typewriter" id="typewriter"></span>
+                <span class="cursor">|</span>
+            </h1>
+            <p class="hero-desc">
+                Computer science student exploring the intersection of deep learning,
+                PyTorch tensor magic, and LLMs for autonomous systems.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">// view_projects()</a>
+                <a href="#contact" class="btn btn-outline">// contact_me()</a>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <h2 class="section-title"><span class="title-num">01</span> About</h2>
+            <div class="about-grid">
+                <div class="about-main">
+                    <p>
+                        I'm a <strong>computer science</strong> student focused on
+                        <strong>artificial intelligence</strong> and
+                        <strong>deep learning</strong>. My daily tools are
+                        <code class="code-inline">Python</code> and
+                        <code class="code-inline">PyTorch</code> — I juggle tensors,
+                        debug gradients, and wonder why my model's loss is plateauing again.
+                    </p>
+                    <p>
+                        Currently working on a coursework project that connects
+                        <span class="highlight">large language models</span> with
+                        <span class="highlight">vehicle control frameworks</span>.
+                        It's ambitious, messy, and exactly what I signed up for.
+                    </p>
+                </div>
+                <div class="about-code">
+                    <div class="code-window">
+                        <div class="code-window-header">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                            <span class="code-filename">profile.py</span>
+                        </div>
+                        <pre class="code-body"><code><span class="kw">class</span> <span class="func">Me</span>:
+    <span class="def">def</span> <span class="func">__init__</span>(self):
+        self.major = <span class="str">"AI & CS"</span>
+        self.tools = [<span class="str">"Python"</span>, <span class="str">"PyTorch"</span>, <span class="str">"JS"</span>]
+        self.coffee_level = <span class="num">9001</span>
+
+    <span class="def">def</span> <span class="func">current_project</span>(self):
+        <span class="kw">return</span> <span class="str">"LLM + Vehicle Control"</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section" id="skills">
+            <h2 class="section-title"><span class="title-num">02</span> Skills</h2>
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3 class="group-title">🧠 AI / Deep Learning</h3>
+                    <div class="skill-row">
+                        <span class="skill-name">PyTorch</span>
+                        <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+                        <span class="skill-pct">85%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Python</span>
+                        <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+                        <span class="skill-pct">80%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Neural Networks</span>
+                        <div class="bar"><div class="bar-fill" data-width="70"></div></div>
+                        <span class="skill-pct">70%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">LLM Integration</span>
+                        <div class="bar"><div class="bar-fill" data-width="60"></div></div>
+                        <span class="skill-pct">60%</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="group-title">💻 Web Dev</h3>
+                    <div class="skill-row">
+                        <span class="skill-name">HTML / CSS</span>
+                        <div class="bar"><div class="bar-fill" data-width="75"></div></div>
+                        <span class="skill-pct">75%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="bar"><div class="bar-fill" data-width="60"></div></div>
+                        <span class="skill-pct">60%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Flexbox / Grid</span>
+                        <div class="bar"><div class="bar-fill" data-width="70"></div></div>
+                        <span class="skill-pct">70%</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="group-title">🚗 Coursework</h3>
+                    <div class="skill-row">
+                        <span class="skill-name">VLM Framework</span>
+                        <div class="bar"><div class="bar-fill" data-width="65"></div></div>
+                        <span class="skill-pct">65%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Simulation</span>
+                        <div class="bar"><div class="bar-fill" data-width="55"></div></div>
+                        <span class="skill-pct">55%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Git / CLI</span>
+                        <div class="bar"><div class="bar-fill" data-width="75"></div></div>
+                        <span class="skill-pct">75%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section" id="projects">
+            <h2 class="section-title"><span class="title-num">03</span> Projects</h2>
+            <div class="projects-list">
+                <article class="project-card">
+                    <div class="project-head">
+                        <span class="proj-icon">🚗</span>
+                        <h3>LLM-Based Vehicle Control</h3>
+                    </div>
+                    <p>Integrating a large language model into the Vehicle Longitudinal Model (VLM) framework to explore AI-assisted driving decisions.</p>
+                    <div class="proj-tags">
+                        <span>Python</span><span>LLM</span><span>VLM</span><span>Experimenting</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-head">
+                        <span class="proj-icon">🧠</span>
+                        <h3>PyTorch Classification Pipeline</h3>
+                    </div>
+                    <p>End-to-end pipeline: data preprocessing, model architecture, training loop with optimizers, loss functions, and regularization.</p>
+                    <div class="proj-tags">
+                        <span>PyTorch</span><span>Deep Learning</span><span>NumPy</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-head">
+                        <span class="proj-icon">🌐</span>
+                        <h3>AI-Assisted Web Dev Comparison</h3>
+                    </div>
+                    <p>Coursework Part I — comparing two web development approaches: fully AI-generated vs. human-guided with AI assistance.</p>
+                    <div class="proj-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <h2 class="section-title"><span class="title-num">04</span> Contact</h2>
+            <p class="contact-desc">
+                Open to discussing AI, coding, or anything curious. Drop a message.
+            </p>
+            <div class="contact-grid">
+                <a href="#" class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <span class="contact-label">Email</span>
+                </a>
+                <a href="#" class="contact-card">
+                    <span class="contact-icon">🐙</span>
+                    <span class="contact-label">GitHub</span>
+                </a>
+                <a href="#" class="contact-card">
+                    <span class="contact-icon">💼</span>
+                    <span class="contact-label">LinkedIn</span>
+                </a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <span class="footer-text">// made with ☕ + curiosity</span>
+                <span class="footer-cp">© 2025 Lillyli-netizen</span>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
