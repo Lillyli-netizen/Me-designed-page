@@ -58,6 +58,7 @@ body {
     border: 1px solid var(--border);
 }
 .highlight { color: var(--accent); }
+.text-muted { color: var(--text-muted); font-size: 13px; }
 
 /* ===== Sidebar ===== */
 .sidebar {

@@ -1,11 +1,11 @@
 // ===== Typewriter Effect =====
 const phrases = [
-    'Python',
-    'PyTorch',
-    'tensors',
-    'neural networks',
-    'LLMs',
-    'JavaScript'
+    'AI & 大数据',
+    'PyTorch 调参',
+    '大模型应用',
+    '产品经理思维',
+    '剪映剪辑',
+    'IELTS 7.0'
 ];
 const typewriterEl = document.getElementById('typewriter');
 let phraseIdx = 0;

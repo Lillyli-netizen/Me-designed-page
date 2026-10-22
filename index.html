@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lillyli-netizen · Portfolio</title>
+    <title>李月艺 · yueyili</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,9 +14,9 @@
     <!-- Sidebar Nav -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <div class="avatar">L</div>
-            <div class="sidebar-name">Lillyli-netizen</div>
-            <div class="sidebar-role">AI & CS Student</div>
+            <div class="avatar">Y</div>
+            <div class="sidebar-name">李月艺</div>
+            <div class="sidebar-role">yueyili · ECCE @ UNNC</div>
         </div>
         <nav class="sidebar-nav">
             <a href="#hero" class="nav-item active" data-target="hero">
@@ -48,19 +48,19 @@
 
         <!-- Hero -->
         <section class="section hero" id="hero">
-            <div class="hero-tag">// hello world</div>
+            <div class="hero-tag">// hello world, I'm</div>
             <h1 class="hero-title">
-                I build things with
+                李月艺 (yueyili) —
                 <span class="typewriter" id="typewriter"></span>
                 <span class="cursor">|</span>
             </h1>
             <p class="hero-desc">
-                Computer science student exploring the intersection of deep learning,
-                PyTorch tensor magic, and LLMs for autonomous systems.
+                2026-2027 就读宁波诺丁汉大学 ECCE 硕士，本科山农大数据专业。
+                写 Python、调 PyTorch、玩大模型，也做产品、剪视频、写博客。
             </p>
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary">// view_projects()</a>
-                <a href="#contact" class="btn btn-outline">// contact_me()</a>
+                <a href="https://blog.csdn.net/qq_63283852" class="btn btn-outline" target="_blank">// my_csdn()</a>
             </div>
         </section>
 
@@ -69,19 +69,24 @@
             <h2 class="section-title"><span class="title-num">01</span> About</h2>
             <div class="about-grid">
                 <div class="about-main">
+                    <h3 style="font-size:15px;color:var(--accent);margin-bottom:14px;">🎓 教育经历</h3>
                     <p>
-                        I'm a <strong>computer science</strong> student focused on
-                        <strong>artificial intelligence</strong> and
-                        <strong>deep learning</strong>. My daily tools are
-                        <code class="code-inline">Python</code> and
-                        <code class="code-inline">PyTorch</code> — I juggle tensors,
-                        debug gradients, and wonder why my model's loss is plateauing again.
+                        <strong>宁波诺丁汉大学 (UNNC)</strong> · ECCE 硕士<br>
+                        <span class="text-muted">2026 - 2027 | 电子通信与计算机工程 | 雅思 7.0</span>
                     </p>
                     <p>
-                        Currently working on a coursework project that connects
-                        <span class="highlight">large language models</span> with
-                        <span class="highlight">vehicle control frameworks</span>.
-                        It's ambitious, messy, and exactly what I signed up for.
+                        <strong>山东农业大学</strong> · 数据科学与大数据技术 本科<br>
+                        <span class="text-muted">2021.09 - 2025.06 | GPA 前 30% | 数学建模校赛一等奖</span>
+                    </p>
+
+                    <h3 style="font-size:15px;color:var(--accent);margin:24px 0 14px;">💼 经历</h3>
+                    <p>
+                        <strong>齐鲁易码政务产品</strong> · 产品经理 (2024.12 - 2025.04)<br>
+                        主导 6 类二维码赋码管理系统的 0-1 需求设计，对接山东省公共资源交易平台。
+                    </p>
+                    <p>
+                        <strong>山东广电</strong> · 剪辑实习生 (2023.10 - 2024.06)<br>
+                        短视频内容运营，3 个月抖音粉丝增长 20,000+，单周最高播放 129 万。
                     </p>
                 </div>
                 <div class="about-code">
@@ -92,14 +97,21 @@
                             <span class="dot dot-green"></span>
                             <span class="code-filename">profile.py</span>
                         </div>
-                        <pre class="code-body"><code><span class="kw">class</span> <span class="func">Me</span>:
+                        <pre class="code-body"><code><span class="kw">class</span> <span class="func">YueyiLi</span>:
     <span class="def">def</span> <span class="func">__init__</span>(self):
-        self.major = <span class="str">"AI & CS"</span>
-        self.tools = [<span class="str">"Python"</span>, <span class="str">"PyTorch"</span>, <span class="str">"JS"</span>]
-        self.coffee_level = <span class="num">9001</span>
+        self.name = <span class="str">"李月艺"</span>
+        self.alias = <span class="str">"yueyili"</span>
+        self.master = <span class="str">"UNNC · ECCE"</span>
+        self.bachelor = <span class="str">"山农 · 大数据"</span>
+        self.ielts = <span class="num">7.0</span>
+        self.csdn_posts = <span class="num">51</span>
 
-    <span class="def">def</span> <span class="func">current_project</span>(self):
-        <span class="kw">return</span> <span class="str">"LLM + Vehicle Control"</span></code></pre>
+    <span class="def">def</span> <span class="func">stack</span>(self):
+        <span class="kw">return</span> [<span class="str">"Python"</span>, <span class="str">"PyTorch"</span>,
+                   <span class="str">"大模型"</span>, <span class="str">"PRD"</span>, <span class="str">"剪映"</span>]
+
+    <span class="def">def</span> <span class="func">currently</span>(self):
+        <span class="kw">return</span> <span class="str">"LLM + Vehicle Control 探索中"</span></code></pre>
                     </div>
                 </div>
             </div>
@@ -110,62 +122,62 @@
             <h2 class="section-title"><span class="title-num">02</span> Skills</h2>
             <div class="skills-container">
                 <div class="skill-group">
-                    <h3 class="group-title">🧠 AI / Deep Learning</h3>
-                    <div class="skill-row">
-                        <span class="skill-name">PyTorch</span>
-                        <div class="bar"><div class="bar-fill" data-width="85"></div></div>
-                        <span class="skill-pct">85%</span>
-                    </div>
+                    <h3 class="group-title">🧠 AI / 深度学习</h3>
                     <div class="skill-row">
                         <span class="skill-name">Python</span>
                         <div class="bar"><div class="bar-fill" data-width="80"></div></div>
                         <span class="skill-pct">80%</span>
                     </div>
                     <div class="skill-row">
-                        <span class="skill-name">Neural Networks</span>
+                        <span class="skill-name">PyTorch</span>
                         <div class="bar"><div class="bar-fill" data-width="70"></div></div>
                         <span class="skill-pct">70%</span>
                     </div>
                     <div class="skill-row">
-                        <span class="skill-name">LLM Integration</span>
-                        <div class="bar"><div class="bar-fill" data-width="60"></div></div>
-                        <span class="skill-pct">60%</span>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h3 class="group-title">💻 Web Dev</h3>
-                    <div class="skill-row">
-                        <span class="skill-name">HTML / CSS</span>
-                        <div class="bar"><div class="bar-fill" data-width="75"></div></div>
-                        <span class="skill-pct">75%</span>
-                    </div>
-                    <div class="skill-row">
-                        <span class="skill-name">JavaScript</span>
-                        <div class="bar"><div class="bar-fill" data-width="60"></div></div>
-                        <span class="skill-pct">60%</span>
-                    </div>
-                    <div class="skill-row">
-                        <span class="skill-name">Flexbox / Grid</span>
-                        <div class="bar"><div class="bar-fill" data-width="70"></div></div>
-                        <span class="skill-pct">70%</span>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <h3 class="group-title">🚗 Coursework</h3>
-                    <div class="skill-row">
-                        <span class="skill-name">VLM Framework</span>
+                        <span class="skill-name">大模型应用</span>
                         <div class="bar"><div class="bar-fill" data-width="65"></div></div>
                         <span class="skill-pct">65%</span>
                     </div>
                     <div class="skill-row">
-                        <span class="skill-name">Simulation</span>
-                        <div class="bar"><div class="bar-fill" data-width="55"></div></div>
-                        <span class="skill-pct">55%</span>
-                    </div>
-                    <div class="skill-row">
-                        <span class="skill-name">Git / CLI</span>
+                        <span class="skill-name">深度学习基础</span>
                         <div class="bar"><div class="bar-fill" data-width="75"></div></div>
                         <span class="skill-pct">75%</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="group-title">📋 产品 & 设计</h3>
+                    <div class="skill-row">
+                        <span class="skill-name">PRD 文档</span>
+                        <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+                        <span class="skill-pct">80%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">墨刀 / Axure 原型</span>
+                        <div class="bar"><div class="bar-fill" data-width="75"></div></div>
+                        <span class="skill-pct">75%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Xmind / Visio</span>
+                        <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+                        <span class="skill-pct">85%</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="group-title">🎬 媒体 & 运维</h3>
+                    <div class="skill-row">
+                        <span class="skill-name">剪映 / PR</span>
+                        <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+                        <span class="skill-pct">80%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">前端 & 官网运维</span>
+                        <div class="bar"><div class="bar-fill" data-width="65"></div></div>
+                        <span class="skill-pct">65%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Office 全家桶</span>
+                        <div class="bar"><div class="bar-fill" data-width="90"></div></div>
+                        <span class="skill-pct">90%</span>
                     </div>
                 </div>
             </div>
@@ -177,34 +189,68 @@
             <div class="projects-list">
                 <article class="project-card">
                     <div class="project-head">
-                        <span class="proj-icon">🚗</span>
-                        <h3>LLM-Based Vehicle Control</h3>
+                        <span class="proj-icon">📱</span>
+                        <h3>齐鲁易码 · 政务二维码管理系统</h3>
                     </div>
-                    <p>Integrating a large language model into the Vehicle Longitudinal Model (VLM) framework to explore AI-assisted driving decisions.</p>
+                    <p>
+                        产品经理，0-1 主导身份码、商品码、竞价码等 6 类二维码功能设计。
+                        对接山东省公共资源交易平台、药械系统、电子营业执照系统，实现数据互通。
+                    </p>
                     <div class="proj-tags">
-                        <span>Python</span><span>LLM</span><span>VLM</span><span>Experimenting</span>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <div class="project-head">
-                        <span class="proj-icon">🧠</span>
-                        <h3>PyTorch Classification Pipeline</h3>
-                    </div>
-                    <p>End-to-end pipeline: data preprocessing, model architecture, training loop with optimizers, loss functions, and regularization.</p>
-                    <div class="proj-tags">
-                        <span>PyTorch</span><span>Deep Learning</span><span>NumPy</span>
+                        <span>PRD</span><span>产品设计</span><span>政务</span><span>原型</span>
                     </div>
                 </article>
                 <article class="project-card">
                     <div class="project-head">
                         <span class="proj-icon">🌐</span>
-                        <h3>This Website (V2)</h3>
+                        <h3>华大科技 / 华虹设计 官网运维</h3>
                     </div>
-                    <p>Human-guided version of my personal homepage. I designed the layout, color scheme, and features — AI helped implement it.</p>
+                    <p>
+                        负责三家企业官网日常运维、数据备份与前端界面优化。
+                        实现响应式自适应设计，提升多设备访问体验。
+                    </p>
                     <div class="proj-tags">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Human-designed</span>
+                        <span>运维</span><span>响应式设计</span><span>前端优化</span>
                     </div>
-                    <a href="https://lillyli-netizen.github.io/AI-generated-page/" class="project-link" target="_blank">→ See V1 (AI-generated)</a>
+                </article>
+                <article class="project-card">
+                    <div class="project-head">
+                        <span class="proj-icon">✍️</span>
+                        <h3>CSDN 技术博客（51 篇原创）</h3>
+                    </div>
+                    <p>
+                        大模型、深度学习专栏。涵盖 PyTorch 张量操作、神经网络训练、
+                        LLM 应用实践等内容，累计访问量 16,000+。
+                    </p>
+                    <div class="proj-tags">
+                        <span>技术写作</span><span>PyTorch</span><span>大模型</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-head">
+                        <span class="proj-icon">🚗</span>
+                        <h3>Coursework · LLM + Vehicle Control</h3>
+                    </div>
+                    <p>
+                        探索将大语言模型集成到 VLM（Vehicle Longitudinal Model）框架中，
+                        用 LLM 辅助车辆控制决策。过程导向的实验性项目。
+                    </p>
+                    <div class="proj-tags">
+                        <span>Python</span><span>LLM</span><span>VLM</span><span>探索中</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-head">
+                        <span class="proj-icon">🎬</span>
+                        <h3>山东广电 · 短视频运营</h3>
+                    </div>
+                    <p>
+                        3 个月抖音粉丝增长 20,000+，单周最高播放量 129 万。
+                        独立完成 300+ 新闻类带货视频剪辑，单条观看量平均提升 30%。
+                    </p>
+                    <div class="proj-tags">
+                        <span>剪辑</span><span>短视频运营</span><span>数据驱动</span>
+                    </div>
                 </article>
             </div>
         </section>
@@ -213,20 +259,20 @@
         <section class="section" id="contact">
             <h2 class="section-title"><span class="title-num">04</span> Contact</h2>
             <p class="contact-desc">
-                Open to discussing AI, coding, or anything curious. Drop a message.
+                欢迎交流 AI、产品、视频剪辑或任何有趣的话题。
             </p>
             <div class="contact-grid">
-                <a href="#" class="contact-card">
+                <a href="mailto:lili_bule578298272@163.com" class="contact-card">
                     <span class="contact-icon">📧</span>
                     <span class="contact-label">Email</span>
                 </a>
-                <a href="#" class="contact-card">
+                <a href="https://blog.csdn.net/qq_63283852" class="contact-card" target="_blank">
+                    <span class="contact-icon">✍️</span>
+                    <span class="contact-label">CSDN 博客</span>
+                </a>
+                <a href="https://github.com/Lillyli-netizen" class="contact-card" target="_blank">
                     <span class="contact-icon">🐙</span>
                     <span class="contact-label">GitHub</span>
-                </a>
-                <a href="#" class="contact-card">
-                    <span class="contact-icon">💼</span>
-                    <span class="contact-label">LinkedIn</span>
                 </a>
             </div>
         </section>
@@ -234,7 +280,7 @@
         <footer class="footer">
             <div class="footer-inner">
                 <span class="footer-text">// made with ☕ + curiosity</span>
-                <span class="footer-cp">© 2025 Lillyli-netizen</span>
+                <span class="footer-cp">© 2025 李月艺 · yueyili</span>
             </div>
         </footer>
 
