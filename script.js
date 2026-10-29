@@ -30,13 +30,11 @@ const i18n = {
         'projects.title': '研究项目',
         'projects.thesis.title': '基于改进 Faster R-CNN 的马铃薯叶片病害识别',
         'projects.thesis.desc': '本科毕业论文。针对原始 Faster R-CNN 在农业病害检测场景下精度不足的问题，以 MobileNetV4 替换传统骨干网络以降低计算开销，并引入坐标注意力（Coordinate Attention）机制增强模型对病斑位置与尺寸的敏感度。在 PlantVillage 数据集上完成训练与对比实验，采用 mAP@0.5 作为核心评价指标，并构建基于 Flask 的可视化推理界面用于部署验证。',
-        'projects.thesis.school': '培养单位',
-        'projects.thesis.advisor': '指导教师',
         'projects.thesis.year': '完成时间',
         'projects.p1.title': 'LLM-Based Vehicle Control Framework',
         'projects.p1.desc': '探索性研究：将大语言模型集成至车辆纵向控制（VLM）框架，利用 LLM 的自然语言理解与推理能力辅助跟车决策与异常工况识别。涉及 Python 仿真环境搭建、VLM 模型参数调优、LLM API 调用链路设计，以及控制稳定性与时延特性的初步分析。',
         'projects.p2.title': 'CSDN 技术博客（51 篇原创）',
-        'projects.p2.desc': '开设"大模型应用"与"深度学习"专栏。内容涵盖 PyTorch 张量操作详解、神经网络训练流程剖析、Faster R-CNN 论文精读、LLM API 调用实践等技术笔记，累计访问量 16,000+。',
+        'projects.p2.desc': '开设"大模型""深度学习"等专栏，2026 年持续更新技术笔记 50 篇，涵盖 PyTorch 张量操作详解、神经网络训练流程剖析、Faster R-CNN 论文精读与 LLM 应用实践，累计访问量 16,000+、获收藏 199 次。',
         'projects.p3.title': '政务二维码赋码管理系统',
         'projects.p3.desc': '以产品经理角色参与山东省公共资源交易数字化转型项目。主导身份码、商品码、竞价码等 6 类二维码实体的需求建模与功能设计，完成跨系统对接方案（公共资源交易平台、药械交易系统、电子营业执照系统），输出 PRD 文档与原型设计。',
         'projects.p4.title': '企业级门户网站前端优化',
@@ -86,13 +84,11 @@ const i18n = {
         'projects.title': 'Research Projects',
         'projects.thesis.title': 'Improved Faster R-CNN for Potato Leaf Disease Detection',
         'projects.thesis.desc': "Undergraduate thesis (44 pages). Replaced Faster R-CNN's backbone with MobileNetV4 for reduced compute overhead, and integrated Coordinate Attention (CA) to improve sensitivity to lesion position and scale. Trained and benchmarked on PlantVillage, mAP@0.5 as primary metric. Deployed via Flask for visual inference validation.",
-        'projects.thesis.school': 'University',
-        'projects.thesis.advisor': 'Supervisor',
         'projects.thesis.year': 'Completed',
         'projects.p1.title': 'LLM-Based Vehicle Control Framework',
         'projects.p1.desc': "Exploratory research: integrating a Large Language Model into the Vehicle Longitudinal Model (VLM) framework. Leveraging LLM reasoning for car-following decisions and anomaly detection. Work includes Python simulation, VLM parameter tuning, LLM API pipeline design, and preliminary control stability analysis.",
         'projects.p2.title': 'CSDN Tech Blog (51 Original Posts)',
-        'projects.p2.desc': 'Columns on "LLM Applications" and "Deep Learning". Posts include PyTorch tensor internals, NN training pipeline walkthroughs, Faster R-CNN paper breakdown, and LLM API hands-on guides. 16,000+ total views.',
+        'projects.p2.desc': "Columns on 'LLM Applications' and 'Deep Learning' — 50 posts updated through 2026, covering PyTorch tensor internals, NN training pipelines, Faster R-CNN paper breakdowns, and LLM hands-on guides. 16,000+ views and 199 bookmarks.",
         'projects.p3.title': 'Govt QR Code Management System',
         'projects.p3.desc': 'Product manager on Shandong province public resource trading digitalization. Led requirements modeling for 6 QR code entity types (identity, product, bidding...). Designed cross-system integration with trading, medical device, and e-license platforms. Delivered PRD and prototype specs.',
         'projects.p4.title': 'Corporate Portal Frontend Optimization',
@@ -139,6 +135,7 @@ type();
 
 // ===== i18n Toggle =====
 const langToggle = document.getElementById('langToggle');
+const themeBtn = document.getElementById('themeToggle');
 
 function applyLang(lang) {
     document.body.dataset.lang = lang;
@@ -151,7 +148,7 @@ function applyLang(lang) {
     document.querySelector(lang === 'zh' ? '.sidebar-name' : '.sidebar-name-en')?.classList.remove('hidden');
     document.querySelectorAll('.hero-name-cn, .hero-name-en').forEach(el => el.classList.add('hidden'));
     document.querySelector(lang === 'zh' ? '.hero-name-cn' : '.hero-name-en')?.classList.remove('hidden');
-    currentPhrases = phrases[lang]; phraseIdx = 0; charIdx = 0; deleting = false; type();
+    currentPhrases = phrases[lang]; phraseIdx = 0; charIdx = 0; deleting = false;
     localStorage.setItem('lang', lang);
     langToggle.querySelector('.lang-label').textContent = lang === 'zh' ? 'EN' : '中';
     updateThemeBtn();
@@ -189,12 +186,10 @@ const skillObserver = new IntersectionObserver((entries) => {
             skillObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.25 });
-const skillsSection = document.getElementById('skills');
-if (skillsSection) skillObserver.observe(skillsSection);
+}, { threshold: 0.35 });
+document.querySelectorAll('.skill-group').forEach(g => skillObserver.observe(g));
 
 // ===== Theme Toggle =====
-const themeBtn = document.getElementById('themeToggle');
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) document.body.dataset.theme = savedTheme;
 updateThemeBtn();
@@ -207,10 +202,13 @@ themeBtn?.addEventListener('click', () => {
 });
 
 function updateThemeBtn() {
-    const label = themeBtn?.querySelector('.toggle-label');
-    if (!label) return;
+    if (!themeBtn) return;
+    const label = themeBtn.querySelector('.toggle-label');
+    const icon = themeBtn.querySelector('.toggle-icon');
     const lang = document.body.dataset.lang === 'en' ? 'en' : 'zh';
-    label.textContent = document.body.dataset.theme === 'dark' ? i18n[lang]['theme.light'] : i18n[lang]['theme.dark'];
+    const toLight = document.body.dataset.theme === 'dark';
+    if (label) label.textContent = toLight ? i18n[lang]['theme.light'] : i18n[lang]['theme.dark'];
+    if (icon) icon.textContent = toLight ? '☀' : '🌙';
 }
 
 // ===== Fade-in =====
@@ -222,4 +220,13 @@ const fadeObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.section').forEach(el => {
     el.classList.add('fade-in');
     fadeObserver.observe(el);
+});
+
+// ===== Card spotlight (radial glow follows cursor) =====
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
 });

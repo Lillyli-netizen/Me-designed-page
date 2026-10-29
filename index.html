@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark" data-lang="zh">
+    <div class="bg-fx" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
 
     <!-- Sidebar Nav -->
     <aside class="sidebar" id="sidebar">
@@ -148,33 +153,9 @@
                     </div>
                     <div class="thesis-meta">
                         <div class="meta-item">
-                            <span class="meta-label" data-i18n="projects.thesis.school">培养单位</span>
-                            <span class="meta-val">山东农业大学</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label" data-i18n="projects.thesis.advisor">指导教师</span>
-                            <span class="meta-val">董晓亮 讲师</span>
-                        </div>
-                        <div class="meta-item">
                             <span class="meta-label" data-i18n="projects.thesis.year">完成时间</span>
                             <span class="meta-val">2025 年 5 月</span>
                         </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-head">
-                        <span class="proj-icon">🚗</span>
-                        <h3 data-i18n="projects.p1.title">LLM-Based Vehicle Control Framework</h3>
-                    </div>
-                    <p data-i18n="projects.p1.desc">
-                        探索性研究项目：将大语言模型集成至车辆纵向控制（VLM）框架，
-                        利用 LLM 的自然语言理解与推理能力辅助跟车决策与异常工况识别。
-                        涉及 Python 仿真环境搭建、VLM 模型参数调优、LLM API 调用链路设计，
-                        以及控制稳定性与时延特性的初步分析。
-                    </p>
-                    <div class="proj-tags">
-                        <span>Python</span><span>LLM APIs</span><span>VLM</span><span>Control</span>
                     </div>
                 </article>
 
@@ -184,9 +165,10 @@
                         <h3 data-i18n="projects.p2.title">CSDN 技术博客（51 篇原创）</h3>
                     </div>
                     <p data-i18n="projects.p2.desc">
-                        开设"大模型应用"与"深度学习"专栏。内容涵盖 PyTorch 张量操作详解、
-                        神经网络训练流程剖析、Faster R-CNN 论文精读、
-                        LLM API 调用实践等技术笔记，累计访问量 16,000+。
+                        开设"大模型""深度学习"等专栏，2026 年持续更新技术笔记 50 篇，
+                        涵盖 PyTorch 张量操作详解、神经网络训练流程剖析、
+                        Faster R-CNN 论文精读与 LLM 应用实践，
+                        累计访问量 16,000+、获收藏 199 次。
                     </p>
                     <div class="proj-tags">
                         <span data-i18n="tag.techwriting">技术写作</span><span>PyTorch</span><span>LLM</span><span>目标检测</span>
@@ -222,6 +204,22 @@
                     </p>
                     <div class="proj-tags">
                         <span>HTML5</span><span>响应式设计</span><span>性能优化</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-head">
+                        <span class="proj-icon">🚗</span>
+                        <h3 data-i18n="projects.p1.title">LLM-Based Vehicle Control Framework</h3>
+                    </div>
+                    <p data-i18n="projects.p1.desc">
+                        探索性研究项目：将大语言模型集成至车辆纵向控制（VLM）框架，
+                        利用 LLM 的自然语言理解与推理能力辅助跟车决策与异常工况识别。
+                        涉及 Python 仿真环境搭建、VLM 模型参数调优、LLM API 调用链路设计，
+                        以及控制稳定性与时延特性的初步分析。
+                    </p>
+                    <div class="proj-tags">
+                        <span>Python</span><span>LLM APIs</span><span>VLM</span><span>Control</span>
                     </div>
                 </article>
             </div>
