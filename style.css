@@ -81,7 +81,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 240px;
+    width: 280px;
     height: 100vh;
     background: var(--bg-elevated);
     border-right: 1px solid var(--border);
@@ -99,8 +99,8 @@ body {
 
 .avatar {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 14px;
     background: var(--accent);
     color: #fff;
@@ -237,7 +237,8 @@ body {
 
 /* ===== Main ===== */
 .main {
-    margin-left: 240px;
+    margin-left: max(280px, calc((100% - 900px) / 2));
+    margin-right: auto;
     padding: 0 48px;
     max-width: 900px;
 }
