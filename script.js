@@ -8,8 +8,8 @@ const i18n = {
         'nav.projects': '研究项目',
         'nav.comps': '比赛',
         'nav.contact': '联系',
-        'theme.light': '暖色',
-        'theme.dark': '深色',
+        'theme.light': '冷色',
+        'theme.dark': '暖色',
         'hero.desc': '2026-2027 学年入读宁波诺丁汉大学 ECCE 硕士项目。本科毕业于山东农业大学数据科学与大数据技术专业。研究兴趣涵盖计算机视觉、大语言模型及自动驾驶车辆控制。',
         'hero.projects': '查看研究项目 ↗',
         'hero.csdn': '技术博客 ↗',
@@ -85,8 +85,8 @@ const i18n = {
         'nav.projects': 'Research',
         'nav.comps': 'Competitions',
         'nav.contact': 'Contact',
-        'theme.light': 'Warm',
-        'theme.dark': 'Dark',
+        'theme.light': 'Cool',
+        'theme.dark': 'Warm',
         'hero.desc': "Starting MSc ECCE at UNNC (2026-2027). BSc in Big Data from Shandong Agricultural University. Research interests: computer vision, LLMs, and autonomous vehicle control.",
         'hero.projects': 'View Research ↗',
         'hero.csdn': 'Tech Blog ↗',
@@ -250,7 +250,7 @@ function updateThemeBtn() {
     const lang = document.body.dataset.lang === 'en' ? 'en' : 'zh';
     const toLight = document.body.dataset.theme === 'dark';
     if (label) label.textContent = toLight ? i18n[lang]['theme.light'] : i18n[lang]['theme.dark'];
-    if (icon) icon.textContent = toLight ? '✦' : '🌙';
+    if (icon) icon.textContent = toLight ? '🌙' : '✦';
 }
 
 // ===== Slide-in (section content enters from lower-left on scroll) =====

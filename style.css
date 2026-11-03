@@ -1,25 +1,6 @@
 /* ===== Theme Variables ===== */
 :root {
-    /* Dark theme (default) */
-    --bg: #0d1117;
-    --bg-elevated: #161b22;
-    --bg-card: #1c2128;
-    --border: #30363d;
-    --text: #c9d1d9;
-    --text-dim: #8b949e;
-    --text-muted: #6e7681;
-    --accent: #58a6ff;
-    --accent-glow: rgba(88, 166, 255, 0.3);
-    --accent-green: #3fb950;
-    --accent-purple: #bc8cff;
-    --bar-bg: #21262d;
-    --bar-fill: linear-gradient(90deg, #58a6ff, #3fb950);
-    --code-bg: #010409;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* Warm dark theme (styled alternative) */
-body[data-theme="light"] {
+    /* Warm dark (default) */
     --bg: #191512;
     --bg-elevated: #201b16;
     --bg-card: #262019;
@@ -37,6 +18,25 @@ body[data-theme="light"] {
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
+/* Cool dark (alternative) */
+body[data-theme="light"] {
+    --bg: #0d1117;
+    --bg-elevated: #161b22;
+    --bg-card: #1c2128;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --text-dim: #8b949e;
+    --text-muted: #6e7681;
+    --accent: #58a6ff;
+    --accent-glow: rgba(88, 166, 255, 0.3);
+    --accent-green: #3fb950;
+    --accent-purple: #bc8cff;
+    --bar-bg: #21262d;
+    --bar-fill: linear-gradient(90deg, #58a6ff, #3fb950);
+    --code-bg: #010409;
+    --shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
 /* ===== Reset ===== */
 * {
     margin: 0;
@@ -51,8 +51,8 @@ html {
 body {
     font-family: 'Inter', -apple-system, sans-serif;
     background: var(--bg);
-    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1.5px);
-    background-size: 26px 26px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1.5px);
+    background-size: 22px 22px;
     color: var(--text);
     line-height: 1.7;
     transition: background 0.3s, color 0.3s;
