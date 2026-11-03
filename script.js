@@ -10,14 +10,15 @@ const i18n = {
         'theme.light': '浅色',
         'theme.dark': '深色',
         'hero.desc': '2026-2027 学年入读宁波诺丁汉大学 ECCE 硕士项目。本科毕业于山东农业大学数据科学与大数据技术专业。研究兴趣涵盖计算机视觉、大语言模型及自动驾驶车辆控制。',
-        'hero.csdn': '// 技术博客()',
+        'hero.projects': '查看研究项目 ↗',
+        'hero.csdn': '技术博客 ↗',
         'about.title': '关于',
-        'about.edu': '🎓 教育背景',
+        'about.edu': '教育背景',
         'about.master.degree': '电子通信与计算机工程硕士',
         'about.master.detail': '2026 - 2027 | MSc ECCE | IELTS 7.0',
         'about.bachelor.degree': '数据科学与大数据技术学士',
         'about.bachelor.detail': '2021.09 - 2025.06 | Top 30% GPA | 全国大学生数学建模竞赛校赛一等奖',
-        'about.res': '🔬 研究方向',
+        'about.res': '研究方向',
         'about.res.desc': '计算机视觉领域聚焦于目标检测算法的改进与农业病害识别应用；当前探索大语言模型在自动驾驶车辆纵向控制框架中的集成方法。',
         'skills.title': '技术栈',
         'skills.g1': '深度学习 & 计算机视觉',
@@ -64,14 +65,15 @@ const i18n = {
         'theme.light': 'Light',
         'theme.dark': 'Dark',
         'hero.desc': "Starting MSc ECCE at UNNC (2026-2027). BSc in Big Data from Shandong Agricultural University. Research interests: computer vision, LLMs, and autonomous vehicle control.",
-        'hero.csdn': '// tech_blog()',
+        'hero.projects': 'View Research ↗',
+        'hero.csdn': 'Tech Blog ↗',
         'about.title': 'About',
-        'about.edu': '🎓 Education',
+        'about.edu': 'Education',
         'about.master.degree': 'MSc Electronic, Communication & Computer Engineering',
         'about.master.detail': '2026 - 2027 | University of Nottingham Ningbo | IELTS 7.0',
         'about.bachelor.degree': 'BSc Data Science & Big Data Technology',
         'about.bachelor.detail': '2021.09 - 2025.06 | Top 30% GPA | 1st Prize, Math Modeling Competition',
-        'about.res': '🔬 Research Focus',
+        'about.res': 'Research Focus',
         'about.res.desc': 'Computer vision — improved object detection for agricultural disease diagnosis. Currently exploring LLM integration into longitudinal vehicle control frameworks.',
         'skills.title': 'Tech Stack',
         'skills.g1': 'Deep Learning & CV',
@@ -143,11 +145,6 @@ function applyLang(lang) {
         const key = el.dataset.i18n;
         if (i18n[lang][key]) el.textContent = i18n[lang][key];
     });
-    // Name display
-    document.querySelectorAll('.sidebar-name').forEach(el => el.classList.add('hidden'));
-    document.querySelector(lang === 'zh' ? '.sidebar-name' : '.sidebar-name-en')?.classList.remove('hidden');
-    document.querySelectorAll('.hero-name-cn, .hero-name-en').forEach(el => el.classList.add('hidden'));
-    document.querySelector(lang === 'zh' ? '.hero-name-cn' : '.hero-name-en')?.classList.remove('hidden');
     currentPhrases = phrases[lang]; phraseIdx = 0; charIdx = 0; deleting = false;
     localStorage.setItem('lang', lang);
     langToggle.querySelector('.lang-label').textContent = lang === 'zh' ? 'EN' : '中';
@@ -211,15 +208,21 @@ function updateThemeBtn() {
     if (icon) icon.textContent = toLight ? '☀' : '🌙';
 }
 
-// ===== Fade-in =====
-const fadeObserver = new IntersectionObserver((entries) => {
+// ===== Slide-in (section content enters from lower-left on scroll) =====
+const slideObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            slideObserver.unobserve(entry.target);
+        }
     });
-}, { threshold: 0.1 });
-document.querySelectorAll('.section').forEach(el => {
-    el.classList.add('fade-in');
-    fadeObserver.observe(el);
+}, { threshold: 0.15 });
+document.querySelectorAll('.section').forEach(section => {
+    section.querySelectorAll(':scope > *').forEach((child, i) => {
+        child.classList.add('slide-in');
+        child.style.transitionDelay = (i * 90) + 'ms';
+        slideObserver.observe(child);
+    });
 });
 
 

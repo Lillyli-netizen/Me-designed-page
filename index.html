@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>李月艺 · yueyili</title>
+    <title>Olivia Li · 李月艺</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body data-theme="dark" data-lang="zh">
     <!-- Sidebar Nav -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <div class="avatar">Y</div>
-            <div class="sidebar-name">李月艺</div>
-            <div class="sidebar-name-en hidden">yueyili</div>
+            <!-- 上传照片：把照片命名为 photo.jpg 放到本目录（与 index.html 同级）即可自动显示 -->
+            <div class="avatar">
+                <span class="avatar-letter">O</span>
+                <img class="avatar-photo" src="photo.jpg" alt="Olivia Li" onerror="this.remove()">
+            </div>
+            <div class="sidebar-name">Olivia <span class="name-dash">—</span> <span class="name-cn">李月艺</span></div>
             <div class="sidebar-role" data-i18n="sidebar.role">ECCE @ 宁波诺丁汉大学</div>
         </div>
         <nav class="sidebar-nav">
-            <a href="#hero" class="nav-item active" data-target="hero"><span class="nav-icon">›</span> <span class="nav-label" data-i18n="nav.home">首页</span></a>
-            <a href="#about" class="nav-item" data-target="about"><span class="nav-icon">›</span> <span class="nav-label" data-i18n="nav.about">关于</span></a>
-            <a href="#skills" class="nav-item" data-target="skills"><span class="nav-icon">›</span> <span class="nav-label" data-i18n="nav.skills">技能</span></a>
-            <a href="#projects" class="nav-item" data-target="projects"><span class="nav-icon">›</span> <span class="nav-label" data-i18n="nav.projects">项目</span></a>
-            <a href="#contact" class="nav-item" data-target="contact"><span class="nav-icon">›</span> <span class="nav-label" data-i18n="nav.contact">联系</span></a>
+            <a href="#hero" class="nav-item active" data-target="hero"><span class="nav-icon">›</span> <span
+                    class="nav-label" data-i18n="nav.home">首页</span></a>
+            <a href="#about" class="nav-item" data-target="about"><span class="nav-icon">›</span> <span
+                    class="nav-label" data-i18n="nav.about">关于</span></a>
+            <a href="#skills" class="nav-item" data-target="skills"><span class="nav-icon">›</span> <span
+                    class="nav-label" data-i18n="nav.skills">技能</span></a>
+            <a href="#projects" class="nav-item" data-target="projects"><span class="nav-icon">›</span> <span
+                    class="nav-label" data-i18n="nav.projects">项目</span></a>
+            <a href="#contact" class="nav-item" data-target="contact"><span class="nav-icon">›</span> <span
+                    class="nav-label" data-i18n="nav.contact">联系</span></a>
         </nav>
         <div class="sidebar-footer">
             <button class="lang-toggle" id="langToggle"><span class="lang-label">EN</span></button>
-            <button class="theme-toggle" id="themeToggle"><span class="toggle-icon">☀</span> <span class="toggle-label" data-i18n="theme.light">浅色</span></button>
+            <button class="theme-toggle" id="themeToggle"><span class="toggle-icon">☀</span> <span class="toggle-label"
+                    data-i18n="theme.light">浅色</span></button>
         </div>
     </aside>
 
@@ -35,12 +48,10 @@
 
         <!-- Hero -->
         <section class="section hero" id="hero">
-            <div class="hero-tag">// research & engineering</div>
+            <div class="hero-tag">Computer Vision · LLM · Autonomous Driving</div>
             <h1 class="hero-title">
-                <span class="hero-name-cn">李月艺</span>
-                <span class="hero-name-en hidden">yueyili</span> —
-                <span class="typewriter" id="typewriter"></span>
-                <span class="cursor">|</span>
+                Olivia <span class="name-dash">—</span> <span class="name-cn">李月艺</span><br>
+                <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
             </h1>
             <p class="hero-desc" data-i18n="hero.desc">
                 2026-2027 学年入读宁波诺丁汉大学 ECCE 硕士项目。
@@ -48,8 +59,9 @@
                 研究兴趣涵盖计算机视觉、大语言模型及自动驾驶车辆控制。
             </p>
             <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">// research_projects()</a>
-                <a href="https://blog.csdn.net/qq_63283852" class="btn btn-outline" target="_blank" data-i18n="hero.csdn">// technical_blog()</a>
+                <a href="#projects" class="btn btn-primary" data-i18n="hero.projects">View Research ↗</a>
+                <a href="https://blog.csdn.net/qq_63283852" class="btn btn-outline" target="_blank"
+                    data-i18n="hero.csdn">Tech Blog ↗</a>
             </div>
         </section>
 
@@ -58,17 +70,19 @@
             <h2 class="section-title"><span class="title-num">01</span> <span data-i18n="about.title">关于</span></h2>
             <div class="about-grid">
                 <div class="about-main">
-                    <h3 style="font-size:15px;color:var(--accent);margin-bottom:14px;" data-i18n="about.edu">🎓 教育背景</h3>
+                    <h3 style="font-size:15px;color:var(--accent);margin-bottom:14px;" data-i18n="about.edu">教育背景</h3>
                     <p>
                         <strong>宁波诺丁汉大学 (UNNC)</strong> · <span data-i18n="about.master.degree">电子通信与计算机工程硕士</span><br>
-                        <span class="text-muted" data-i18n="about.master.detail">2026 - 2027 | MSc ECCE | IELTS 7.0</span>
+                        <span class="text-muted" data-i18n="about.master.detail">2026 - 2027 | MSc ECCE | IELTS
+                            7.0</span>
                     </p>
                     <p>
                         <strong>山东农业大学</strong> · <span data-i18n="about.bachelor.degree">数据科学与大数据技术学士</span><br>
-                        <span class="text-muted" data-i18n="about.bachelor.detail">2021.09 - 2025.06 | Top 30% GPA | 全国大学生数学建模竞赛校赛一等奖</span>
+                        <span class="text-muted" data-i18n="about.bachelor.detail">2021.09 - 2025.06 | Top 30% GPA |
+                            全国大学生数学建模竞赛校赛一等奖</span>
                     </p>
 
-                    <h3 style="font-size:15px;color:var(--accent);margin:24px 0 14px;" data-i18n="about.res">🔬 研究方向</h3>
+                    <h3 style="font-size:15px;color:var(--accent);margin:24px 0 14px;" data-i18n="about.res">研究方向</h3>
                     <p data-i18n="about.res.desc">
                         计算机视觉领域聚焦于目标检测算法的改进与农业病害识别应用；
                         当前探索大语言模型在自动驾驶车辆纵向控制框架中的集成方法。
@@ -77,13 +91,14 @@
                 <div class="about-code">
                     <div class="code-window">
                         <div class="code-window-header">
-                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span
+                                class="dot dot-green"></span>
                             <span class="code-filename">research_profile.py</span>
                         </div>
-                        <pre class="code-body"><code><span class="kw">class</span> <span class="func">YueyiLi</span>:
+                        <pre class="code-body"><code><span class="kw">class</span> <span class="func">OliviaLi</span>:
     <span class="def">def</span> <span class="func">__init__</span>(self):
-        self.name = <span class="str">"李月艺"</span>
-        self.alias = <span class="str">"yueyili"</span>
+        self.name = <span class="str">"Olivia Li"</span>
+        self.alias = <span class="str">"olivia"</span>
         self.master = <span class="str">"UNNC · ECCE"</span>
         self.research = [<span class="str">"目标检测"</span>, <span class="str">"大模型应用"</span>,
                         <span class="str">"自动驾驶控制"</span>]
@@ -102,37 +117,82 @@
             <h2 class="section-title"><span class="title-num">02</span> <span data-i18n="skills.title">技术栈</span></h2>
             <div class="skills-container">
                 <div class="skill-group">
-                    <h3 class="group-title">🧠 <span data-i18n="skills.g1">深度学习 & 计算机视觉</span></h3>
-                    <div class="skill-row"><span class="skill-name">PyTorch</span><div class="bar"><div class="bar-fill" data-width="75"></div></div><span class="skill-pct">75%</span></div>
-                    <div class="skill-row"><span class="skill-name">OpenCV</span><div class="bar"><div class="bar-fill" data-width="70"></div></div><span class="skill-pct">70%</span></div>
-                    <div class="skill-row"><span class="skill-name" data-i18n="skills.objdet">目标检测 (Faster R-CNN / YOLO)</span><div class="bar"><div class="bar-fill" data-width="80"></div></div><span class="skill-pct">80%</span></div>
-                    <div class="skill-row"><span class="skill-name" data-i18n="skills.llm">大模型应用开发</span><div class="bar"><div class="bar-fill" data-width="65"></div></div><span class="skill-pct">65%</span></div>
+                    <h3 class="group-title"><span data-i18n="skills.g1">深度学习 & 计算机视觉</span></h3>
+                    <div class="skill-row"><span class="skill-name">PyTorch</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="75"></div>
+                        </div><span class="skill-pct">75%</span>
+                    </div>
+                    <div class="skill-row"><span class="skill-name">OpenCV</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="70"></div>
+                        </div><span class="skill-pct">70%</span>
+                    </div>
+                    <div class="skill-row"><span class="skill-name" data-i18n="skills.objdet">目标检测 (Faster R-CNN /
+                            YOLO)</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="80"></div>
+                        </div><span class="skill-pct">80%</span>
+                    </div>
+                    <div class="skill-row"><span class="skill-name" data-i18n="skills.llm">大模型应用开发</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="65"></div>
+                        </div><span class="skill-pct">65%</span>
+                    </div>
                 </div>
                 <div class="skill-group">
-                    <h3 class="group-title">💻 <span data-i18n="skills.g2">编程语言 & 工具</span></h3>
-                    <div class="skill-row"><span class="skill-name">Python</span><div class="bar"><div class="bar-fill" data-width="85"></div></div><span class="skill-pct">85%</span></div>
-                    <div class="skill-row"><span class="skill-name">NumPy / Pandas</span><div class="bar"><div class="bar-fill" data-width="75"></div></div><span class="skill-pct">75%</span></div>
-                    <div class="skill-row"><span class="skill-name">Git / Linux CLI</span><div class="bar"><div class="bar-fill" data-width="70"></div></div><span class="skill-pct">70%</span></div>
-                    <div class="skill-row"><span class="skill-name">SQL</span><div class="bar"><div class="bar-fill" data-width="60"></div></div><span class="skill-pct">60%</span></div>
+                    <h3 class="group-title"><span data-i18n="skills.g2">编程语言 & 工具</span></h3>
+                    <div class="skill-row"><span class="skill-name">Python</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="85"></div>
+                        </div><span class="skill-pct">85%</span>
+                    </div>
+                    <div class="skill-row"><span class="skill-name">NumPy / Pandas</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="75"></div>
+                        </div><span class="skill-pct">75%</span>
+                    </div>
+                    <div class="skill-row"><span class="skill-name">Git / Linux CLI</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="70"></div>
+                        </div><span class="skill-pct">70%</span>
+                    </div>
+                    <div class="skill-row"><span class="skill-name">SQL</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="60"></div>
+                        </div><span class="skill-pct">60%</span>
+                    </div>
                 </div>
                 <div class="skill-group">
-                    <h3 class="group-title">📐 <span data-i18n="skills.g3">系统设计 & 前端</span></h3>
-                    <div class="skill-row"><span class="skill-name" data-i18n="skills.sysdesign">系统架构设计</span><div class="bar"><div class="bar-fill" data-width="70"></div></div><span class="skill-pct">70%</span></div>
-                    <div class="skill-row"><span class="skill-name">HTML / CSS / JS</span><div class="bar"><div class="bar-fill" data-width="65"></div></div><span class="skill-pct">65%</span></div>
-                    <div class="skill-row"><span class="skill-name" data-i18n="skills.dataaug">数据增强 & 模型调优</span><div class="bar"><div class="bar-fill" data-width="75"></div></div><span class="skill-pct">75%</span></div>
+                    <h3 class="group-title"><span data-i18n="skills.g3">系统设计 & 前端</span></h3>
+                    <div class="skill-row"><span class="skill-name" data-i18n="skills.sysdesign">系统架构设计</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="70"></div>
+                        </div><span class="skill-pct">70%</span>
+                    </div>
+                    <div class="skill-row"><span class="skill-name">HTML / CSS / JS</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="65"></div>
+                        </div><span class="skill-pct">65%</span>
+                    </div>
+                    <div class="skill-row"><span class="skill-name" data-i18n="skills.dataaug">数据增强 & 模型调优</span>
+                        <div class="bar">
+                            <div class="bar-fill" data-width="75"></div>
+                        </div><span class="skill-pct">75%</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects -->
         <section class="section" id="projects">
-            <h2 class="section-title"><span class="title-num">03</span> <span data-i18n="projects.title">研究项目</span></h2>
+            <h2 class="section-title"><span class="title-num">03</span> <span data-i18n="projects.title">研究项目</span>
+            </h2>
             <div class="projects-list">
 
                 <!-- 论文项目 -->
                 <article class="project-card featured">
                     <div class="project-head">
-                        <span class="proj-icon">🥔</span>
                         <h3 data-i18n="projects.thesis.title">基于改进 Faster R-CNN 的马铃薯叶片病害识别</h3>
                     </div>
                     <p data-i18n="projects.thesis.desc">
@@ -143,7 +203,8 @@
                         采用 mAP@0.5 作为核心评价指标，并构建了基于 Flask 的可视化推理界面用于模型部署验证。
                     </p>
                     <div class="proj-tags">
-                        <span>Faster R-CNN</span><span>MobileNetV4</span><span>Coordinate Attention</span><span>PyTorch</span><span>Flask</span>
+                        <span>Faster R-CNN</span><span>MobileNetV4</span><span>Coordinate
+                            Attention</span><span>PyTorch</span><span>Flask</span>
                     </div>
                     <div class="thesis-meta">
                         <div class="meta-item">
@@ -155,7 +216,6 @@
 
                 <article class="project-card">
                     <div class="project-head">
-                        <span class="proj-icon">✍️</span>
                         <h3 data-i18n="projects.p2.title">CSDN 技术博客（51 篇原创）</h3>
                     </div>
                     <p data-i18n="projects.p2.desc">
@@ -165,13 +225,13 @@
                         累计访问量 16,000+、获收藏 199 次。
                     </p>
                     <div class="proj-tags">
-                        <span data-i18n="tag.techwriting">技术写作</span><span>PyTorch</span><span>LLM</span><span>目标检测</span>
+                        <span
+                            data-i18n="tag.techwriting">技术写作</span><span>PyTorch</span><span>LLM</span><span>目标检测</span>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-head">
-                        <span class="proj-icon">🏛</span>
                         <h3 data-i18n="projects.p3.title">政务二维码赋码管理系统</h3>
                     </div>
                     <p data-i18n="projects.p3.desc">
@@ -187,7 +247,6 @@
 
                 <article class="project-card">
                     <div class="project-head">
-                        <span class="proj-icon">🌐</span>
                         <h3 data-i18n="projects.p4.title">企业级门户网站前端优化</h3>
                     </div>
                     <p data-i18n="projects.p4.desc">
@@ -203,7 +262,6 @@
 
                 <article class="project-card">
                     <div class="project-head">
-                        <span class="proj-icon">🚗</span>
                         <h3 data-i18n="projects.p1.title">LLM-Based Vehicle Control Framework</h3>
                     </div>
                     <p data-i18n="projects.p1.desc">
@@ -227,21 +285,21 @@
             </p>
             <div class="contact-grid">
                 <a href="mailto:lili_bule578298272@163.com" class="contact-card">
-                    <span class="contact-icon">📧</span><span class="contact-label">Email</span>
+                    <span class="contact-icon">@</span><span class="contact-label">Email</span>
                 </a>
                 <a href="https://blog.csdn.net/qq_63283852" class="contact-card" target="_blank">
-                    <span class="contact-icon">✍️</span><span class="contact-label">CSDN</span>
+                    <span class="contact-icon">✎</span><span class="contact-label">CSDN</span>
                 </a>
                 <a href="https://github.com/Lillyli-netizen" class="contact-card" target="_blank">
-                    <span class="contact-icon">🐙</span><span class="contact-label">GitHub</span>
+                    <span class="contact-icon">&lt;/&gt;</span><span class="contact-label">GitHub</span>
                 </a>
             </div>
         </section>
 
         <footer class="footer">
             <div class="footer-inner">
-                <span class="footer-text">// research · build · share</span>
-                <span class="footer-cp">© 2025 李月艺 · yueyili</span>
+                <span class="footer-text">Research · Build · Share</span>
+                <span class="footer-cp">© 2025 Olivia Li · 李月艺</span>
             </div>
         </footer>
 
@@ -249,4 +307,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

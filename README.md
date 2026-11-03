@@ -10,7 +10,8 @@ EEEE3134 Coursework Part I — **Version 2 (AI-Guided)**: I provided detailed de
 
 - Dark / light theme toggle (persisted in `localStorage`)
 - Chinese / English bilingual switch (persisted)
-- Typewriter hero, scroll-spy sidebar navigation, fade-in sections
+- Typewriter hero, scroll-spy sidebar navigation, slide-in section entrances
+- Academic-style typography (uppercase section headings, monospace accents)
 - Skill bars animate on scroll (IntersectionObserver)
 - Fully responsive — sidebar collapses to a bottom bar on mobile
 
