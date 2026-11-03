@@ -151,7 +151,7 @@ function applyLang(lang) {
     updateThemeBtn();
 }
 
-const savedLang = localStorage.getItem('lang') || 'zh';
+const savedLang = localStorage.getItem('lang') || 'en';
 applyLang(savedLang);
 
 langToggle?.addEventListener('click', () => {
