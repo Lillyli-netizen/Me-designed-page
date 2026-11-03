@@ -2,6 +2,7 @@
 const i18n = {
     zh: {
         'sidebar.role': 'ECCE @ 宁波诺丁汉大学',
+        'name.full': 'Olivia — 李月艺',
         'nav.home': '首页',
         'nav.about': '关于',
         'nav.skills': '技术栈',
@@ -79,6 +80,7 @@ const i18n = {
     },
     en: {
         'sidebar.role': 'ECCE @ University of Nottingham Ningbo',
+        'name.full': 'Olivia Li',
         'nav.home': 'Home',
         'nav.about': 'About',
         'nav.skills': 'Tech Stack',

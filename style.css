@@ -891,9 +891,3 @@ body {
     color: var(--accent-green);
     transform: rotate(1.5deg);
 }
-
-/* English mode: no CJK characters anywhere */
-body[data-lang="en"] .name-cn,
-body[data-lang="en"] .name-dash {
-    display: none;
-}

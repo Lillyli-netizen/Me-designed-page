@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="style.css?v=9">
 </head>
 
 <body data-theme="dark" data-lang="zh">
@@ -22,7 +22,7 @@
                 <span class="avatar-letter">O</span>
                 <img class="avatar-photo" src="photo.jpg" alt="Olivia Li" onerror="this.remove()">
             </div>
-            <div class="sidebar-name">Olivia <span class="name-dash">—</span> <span class="name-cn">李月艺</span></div>
+            <div class="sidebar-name" data-i18n="name.full">Olivia — 李月艺</div>
             <div class="sidebar-role" data-i18n="sidebar.role">ECCE @ 宁波诺丁汉大学</div>
         </div>
         <nav class="sidebar-nav">
@@ -52,7 +52,7 @@
         <section class="section hero" id="hero">
             <div class="hero-tag">Computer Vision · LLM · Autonomous Driving</div>
             <h1 class="hero-title">
-                Olivia <span class="name-dash">—</span> <span class="name-cn">李月艺</span><br>
+                <span data-i18n="name.full">Olivia — 李月艺</span><br>
                 <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
             </h1>
             <p class="hero-desc" data-i18n="hero.desc">
@@ -383,7 +383,7 @@
 
     </main>
 
-    <script src="script.js?v=8"></script>
+    <script src="script.js?v=9"></script>
 </body>
 
 </html>
