@@ -222,11 +222,4 @@ document.querySelectorAll('.section').forEach(el => {
     fadeObserver.observe(el);
 });
 
-// ===== Card spotlight (radial glow follows cursor) =====
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-        const r = card.getBoundingClientRect();
-        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
-    });
-});
+
