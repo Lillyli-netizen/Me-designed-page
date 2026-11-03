@@ -89,7 +89,7 @@ body {
     border-right: 1px solid var(--border);
     display: flex;
     flex-direction: column;
-    padding: 32px 24px;
+    padding: 32px 24px 110px;
     z-index: 50;
 }
 
@@ -101,8 +101,8 @@ body {
 
 .avatar {
     position: relative;
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     border-radius: 14px;
     background: var(--accent);
     color: #fff;
@@ -188,6 +188,10 @@ body {
 }
 
 .sidebar-footer {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
     padding-top: 16px;
     border-top: 1px solid var(--border);
     display: flex;
@@ -886,4 +890,10 @@ body {
 .comp-card:nth-child(3) .hand-note {
     color: var(--accent-green);
     transform: rotate(1.5deg);
+}
+
+/* English mode: no CJK characters anywhere */
+body[data-lang="en"] .name-cn,
+body[data-lang="en"] .name-dash {
+    display: none;
 }

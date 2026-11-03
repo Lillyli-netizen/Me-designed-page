@@ -74,12 +74,14 @@
                 <div class="about-main">
                     <h3 style="font-size:15px;color:var(--accent);margin-bottom:14px;" data-i18n="about.edu">教育背景</h3>
                     <p>
-                        <strong>宁波诺丁汉大学 (UNNC)</strong> · <span data-i18n="about.master.degree">电子通信与计算机工程硕士</span><br>
+                        <strong data-i18n="about.uni.unnc">宁波诺丁汉大学 (UNNC)</strong> · <span
+                            data-i18n="about.master.degree">电子通信与计算机工程硕士</span><br>
                         <span class="text-muted" data-i18n="about.master.detail">2026 - 2027 | MSc ECCE | IELTS
                             7.0</span>
                     </p>
                     <p>
-                        <strong>山东农业大学</strong> · <span data-i18n="about.bachelor.degree">数据科学与大数据技术学士</span><br>
+                        <strong data-i18n="about.uni.sdu">山东农业大学</strong> · <span
+                            data-i18n="about.bachelor.degree">数据科学与大数据技术学士</span><br>
                         <span class="text-muted" data-i18n="about.bachelor.detail">2021.09 - 2025.06 | Top 30% GPA |
                             全国大学生数学建模竞赛校赛一等奖</span>
                     </p>
@@ -102,9 +104,9 @@
         self.name = <span class="str">"Olivia Li"</span>
         self.alias = <span class="str">"olivia"</span>
         self.master = <span class="str">"UNNC · ECCE"</span>
-        self.research = [<span class="str">"目标检测"</span>, <span class="str">"大模型应用"</span>,
-                        <span class="str">"自动驾驶控制"</span>]
-        self.thesis = <span class="str">"改进 Faster R-CNN 病害识别"</span>
+        self.research = [<span class="str" data-i18n="code.res1">"目标检测"</span>, <span class="str" data-i18n="code.res2">"大模型应用"</span>,
+                        <span class="str" data-i18n="code.res3">"自动驾驶控制"</span>]
+        self.thesis = <span class="str" data-i18n="code.thesis">"改进 Faster R-CNN 病害识别"</span>
 
     <span class="def">def</span> <span class="func">stack</span>(self):
         <span class="kw">return</span> [<span class="str">"Python"</span>, <span class="str">"PyTorch"</span>,
@@ -211,7 +213,7 @@
                     <div class="thesis-meta">
                         <div class="meta-item">
                             <span class="meta-label" data-i18n="projects.thesis.year">完成时间</span>
-                            <span class="meta-val">2025 年 5 月</span>
+                            <span class="meta-val" data-i18n="projects.thesis.date">2025 年 5 月</span>
                         </div>
                     </div>
                 </article>
@@ -227,8 +229,8 @@
                         累计访问量 16,000+、获收藏 199 次。
                     </p>
                     <div class="proj-tags">
-                        <span
-                            data-i18n="tag.techwriting">技术写作</span><span>PyTorch</span><span>LLM</span><span>目标检测</span>
+                        <span data-i18n="tag.techwriting">技术写作</span><span>PyTorch</span><span>LLM</span><span
+                            data-i18n="tag.objdet">目标检测</span>
                     </div>
                 </article>
 
@@ -243,7 +245,8 @@
                         输出 PRD 文档与原型设计。
                     </p>
                     <div class="proj-tags">
-                        <span>系统设计</span><span>PRD</span><span>政务数字化</span>
+                        <span data-i18n="tag.sysdesign">系统设计</span><span>PRD</span><span
+                            data-i18n="tag.gov">政务数字化</span>
                     </div>
                 </article>
 
@@ -258,7 +261,8 @@
                         构建内容管理工作流，支持非技术人员后台更新。
                     </p>
                     <div class="proj-tags">
-                        <span>HTML5</span><span>响应式设计</span><span>性能优化</span>
+                        <span>HTML5</span><span data-i18n="tag.responsive">响应式设计</span><span
+                            data-i18n="tag.perf">性能优化</span>
                     </div>
                 </article>
 
@@ -374,7 +378,7 @@
         <footer class="footer">
             <div class="footer-inner">
                 <span class="footer-text">Research · Build · Share</span>
-                <span class="footer-cp">© 2025 Olivia Li · 李月艺</span>
+                <span class="footer-cp" data-i18n="footer.cp">© 2025 Olivia Li · 李月艺</span>
             </div>
         </footer>
 

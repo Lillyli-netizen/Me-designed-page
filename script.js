@@ -64,7 +64,18 @@ const i18n = {
         'comps.c3.rank': 'LB 0.305 · 名次待更新',
         'comps.c3.desc': 'Kaggle Code Competition：18 分类判断文本出自哪个 LLM。完成 StratifiedGroupKFold TF-IDF + 逻辑回归基线（LB 0.305），正在训练 Qwen3-1.7B + LoRA (r=16) 分类头，捕捉 n-gram 无法覆盖的文体指纹。',
         'contact.title': '联系',
-        'contact.desc': '欢迎就计算机视觉、大模型应用、自动驾驶控制等方向交流。'
+        'contact.desc': '欢迎就计算机视觉、大模型应用、自动驾驶控制等方向交流。',
+        'footer.cp': '© 2025 Olivia Li · 李月艺',
+        'about.uni.unnc': '宁波诺丁汉大学 (UNNC)',
+        'about.uni.sdu': '山东农业大学',
+        'code.res1': '"目标检测"',
+        'code.res2': '"大模型应用"',
+        'code.res3': '"自动驾驶控制"',
+        'code.thesis': '"改进 Faster R-CNN 病害识别"',
+        'projects.thesis.date': '2025 年 5 月',
+        'tag.objdet': '目标检测',
+        'tag.sysdesign': '系统设计',
+        'tag.perf': '性能优化'
     },
     en: {
         'sidebar.role': 'ECCE @ University of Nottingham Ningbo',
@@ -130,7 +141,18 @@ const i18n = {
         'comps.c3.rank': 'LB 0.305 · rank TBD',
         'comps.c3.desc': 'Kaggle Code Competition: 18-way classification of which LLM wrote a given paragraph. Shipped a StratifiedGroupKFold TF-IDF + LogReg baseline (LB 0.305); now training a Qwen3-1.7B + LoRA (r=16) head to capture stylistic fingerprints beyond n-grams.',
         'contact.title': 'Contact',
-        'contact.desc': "Open to chat about computer vision, LLM applications, or autonomous vehicle control research."
+        'contact.desc': "Open to chat about computer vision, LLM applications, or autonomous vehicle control research.",
+        'footer.cp': '© 2025 Olivia Li',
+        'about.uni.unnc': 'University of Nottingham Ningbo (UNNC)',
+        'about.uni.sdu': 'Shandong Agricultural University',
+        'code.res1': '"object detection"',
+        'code.res2': '"LLM applications"',
+        'code.res3': '"autonomous driving control"',
+        'code.thesis': '"Improved Faster R-CNN for disease recognition"',
+        'projects.thesis.date': 'May 2025',
+        'tag.objdet': 'Object Detection',
+        'tag.sysdesign': 'System Design',
+        'tag.perf': 'Performance'
     }
 };
 
@@ -163,6 +185,7 @@ const themeBtn = document.getElementById('themeToggle');
 
 function applyLang(lang) {
     document.body.dataset.lang = lang;
+    document.title = lang === 'zh' ? 'Olivia Li · 李月艺' : 'Olivia Li';
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
         if (i18n[lang][key]) el.textContent = i18n[lang][key];
