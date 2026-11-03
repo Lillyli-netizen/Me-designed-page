@@ -818,3 +818,69 @@ body {
     font-size: 12.5px;
     color: var(--accent-green);
 }
+
+/* ===== Hand-drawn touches on competition cards ===== */
+.comp-card {
+    position: relative;
+}
+.comp-card:nth-child(1) {
+    transform: rotate(-0.7deg);
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+.comp-card:nth-child(2) {
+    transform: rotate(0.6deg);
+    border-radius: 15px 225px 15px 255px / 255px 15px 225px 15px;
+}
+.comp-card:nth-child(3) {
+    transform: rotate(-0.4deg);
+    border-radius: 225px 15px 255px 15px / 15px 255px 15px 225px;
+}
+.comp-card:hover {
+    transform: rotate(0deg) translateY(-2px);
+}
+.comp-card .tape {
+    position: absolute;
+    width: 88px;
+    height: 24px;
+    top: -12px;
+    left: 34px;
+    background: rgba(255, 216, 77, 0.38);
+    transform: rotate(-4deg);
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+.comp-card:nth-child(2) .tape {
+    left: auto;
+    right: 40px;
+    transform: rotate(3deg);
+    background: rgba(88, 166, 255, 0.25);
+}
+.comp-card:nth-child(3) .tape {
+    left: 50%;
+    margin-left: -44px;
+    transform: rotate(-2deg);
+    background: rgba(63, 185, 80, 0.22);
+}
+.hand-note {
+    position: absolute;
+    top: -17px;
+    right: 26px;
+    font-family: 'Caveat', cursive;
+    font-size: 21px;
+    font-weight: 600;
+    color: #e05a4e;
+    transform: rotate(2.5deg);
+    pointer-events: none;
+    white-space: nowrap;
+}
+.comp-card:nth-child(2) .hand-note {
+    right: auto;
+    left: 28px;
+    transform: rotate(-2deg);
+    color: var(--accent);
+}
+.comp-card:nth-child(3) .hand-note {
+    color: var(--accent-green);
+    transform: rotate(1.5deg);
+}
