@@ -32,10 +32,10 @@
                     class="nav-label" data-i18n="nav.about">关于</span></a>
             <a href="#skills" class="nav-item" data-target="skills"><span class="nav-icon">›</span> <span
                     class="nav-label" data-i18n="nav.skills">技能</span></a>
-            <a href="#projects" class="nav-item" data-target="projects"><span class="nav-icon">›</span> <span
-                    class="nav-label" data-i18n="nav.projects">项目</span></a>
             <a href="#competitions" class="nav-item" data-target="competitions"><span class="nav-icon">›</span> <span
                     class="nav-label" data-i18n="nav.comps">比赛</span></a>
+            <a href="#projects" class="nav-item" data-target="projects"><span class="nav-icon">›</span> <span
+                    class="nav-label" data-i18n="nav.projects">项目</span></a>
             <a href="#contact" class="nav-item" data-target="contact"><span class="nav-icon">›</span> <span
                     class="nav-label" data-i18n="nav.contact">联系</span></a>
         </nav>
@@ -188,9 +188,81 @@
             </div>
         </section>
 
-        <!-- Projects -->
+        <!-- Recent Competitions -->
+        <section class="section" id="competitions">
+            <h2 class="section-title"><span class="title-num">03</span> <span data-i18n="comps.title">近期比赛</span>
+            </h2>
+            <div class="comps-list">
+
+                <article class="comp-card">
+                    <div class="tape"></div>
+                    <div class="hand-note">best of 22 submissions!</div>
+                    <div class="comp-head">
+                        <h3 data-i18n="comps.c1.title">大模型复杂表格识别与内容理解</h3>
+                        <span class="comp-plat">Tianchi</span>
+                    </div>
+                    <div class="comp-score-row">
+                        <div class="comp-score">79.40<span class="comp-score-unit"> / 100</span></div>
+                        <div class="comp-rank" data-i18n="comps.c1.rank">排行榜在榜 · 名次待更新</div>
+                    </div>
+                    <p data-i18n="comps.c1.desc">
+                        知乎知学堂大模型挑战赛。908 道真实表格题（结构恢复 / 内容提取 / 数值推理），
+                        设计并落地 Qwen 系多模型交叉验证投票管线：3 票一致安全替换 + 最大模型仲裁分歧，
+                        22 次提交迭代至 79.40 分。
+                    </p>
+                    <div class="proj-tags">
+                        <span>Qwen3.8-Max</span><span>Voting Pipeline</span><span>JSON Recovery</span><span>908
+                            Questions</span>
+                    </div>
+                </article>
+
+                <article class="comp-card">
+                    <div class="tape"></div>
+                    <div class="hand-note">one GPU · 57 hours!</div>
+                    <div class="comp-head">
+                        <h3 data-i18n="comps.c2.title">LingBot-VLA 具身智能挑战赛</h3>
+                        <span class="comp-plat">Tianchi</span>
+                    </div>
+                    <div class="comp-score-row">
+                        <div class="comp-score">56.8%<span class="comp-score-unit"> success</span></div>
+                        <div class="comp-rank" data-i18n="comps.c2.rank">队名「喵喵喵喵而汪之队」· 名次待更新</div>
+                    </div>
+                    <p data-i18n="comps.c2.desc">
+                        微调 6B 视觉-语言-动作（VLA）模型 50k 步（单卡 RTX 6000D，BF16，约 57 小时），
+                        50 任务 × 20 episodes 评测成功率 56.8%（568/1000）；
+                        分析任务得分双峰分布，提出双臂低分任务过采样的改进方向。
+                    </p>
+                    <div class="proj-tags">
+                        <span>VLA · 6B</span><span>50k steps</span><span>RoboTwin</span><span>BF16</span>
+                    </div>
+                </article>
+
+                <article class="comp-card">
+                    <div class="tape"></div>
+                    <div class="hand-note">baseline &rarr; LoRA!</div>
+                    <div class="comp-head">
+                        <h3 data-i18n="comps.c3.title">Name That LLM</h3>
+                        <span class="comp-plat">Kaggle</span>
+                    </div>
+                    <div class="comp-score-row">
+                        <div class="comp-score">0.305<span class="comp-score-unit"> balanced accuracy</span></div>
+                        <div class="comp-rank" data-i18n="comps.c3.rank">LB 0.305 · 名次待更新</div>
+                    </div>
+                    <p data-i18n="comps.c3.desc">
+                        Kaggle Code Competition：18 分类判断文本出自哪个 LLM。
+                        完成 StratifiedGroupKFold TF-IDF + 逻辑回归基线（LB 0.305），
+                        正在训练 Qwen3-1.7B + LoRA (r=16) 分类头，捕捉 n-gram 无法覆盖的文体指纹。
+                    </p>
+                    <div class="proj-tags">
+                        <span>TF-IDF</span><span>LoRA r=16</span><span>Qwen3-1.7B</span><span>18-class</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
         <section class="section" id="projects">
-            <h2 class="section-title"><span class="title-num">03</span> <span data-i18n="projects.title">研究项目</span>
+            <h2 class="section-title"><span class="title-num">04</span> <span data-i18n="projects.title">研究项目</span>
             </h2>
             <div class="projects-list">
 
@@ -280,79 +352,6 @@
                         <span>Python</span><span>LLM APIs</span><span>VLM</span><span>Control</span>
                     </div>
                 </article>
-            </div>
-        </section>
-
-        <!-- Past Competitions -->
-        <section class="section" id="competitions">
-            <h2 class="section-title"><span class="title-num">04</span> <span data-i18n="comps.title">近期比赛</span>
-            </h2>
-            <div class="comps-list">
-
-                <article class="comp-card">
-                    <div class="tape"></div>
-                    <div class="hand-note">best of 22 submissions!</div>
-                    <div class="comp-head">
-                        <h3 data-i18n="comps.c1.title">大模型复杂表格识别与内容理解</h3>
-                        <span class="comp-plat">Tianchi</span>
-                    </div>
-                    <div class="comp-score-row">
-                        <div class="comp-score">79.40<span class="comp-score-unit"> / 100</span></div>
-                        <div class="comp-rank" data-i18n="comps.c1.rank">排行榜在榜 · 名次待更新</div>
-                    </div>
-                    <p data-i18n="comps.c1.desc">
-                        知乎知学堂大模型挑战赛。908 道真实表格题（结构恢复 / 内容提取 / 数值推理），
-                        设计并落地 Qwen 系多模型交叉验证投票管线：3 票一致安全替换 + 最大模型仲裁分歧，
-                        22 次提交迭代至 79.40 分。
-                    </p>
-                    <div class="proj-tags">
-                        <span>Qwen3.8-Max</span><span>Voting Pipeline</span><span>JSON Recovery</span><span>908
-                            Questions</span>
-                    </div>
-                </article>
-
-                <article class="comp-card">
-                    <div class="tape"></div>
-                    <div class="hand-note">one GPU · 57 hours!</div>
-                    <div class="comp-head">
-                        <h3 data-i18n="comps.c2.title">LingBot-VLA 具身智能挑战赛</h3>
-                        <span class="comp-plat">Tianchi</span>
-                    </div>
-                    <div class="comp-score-row">
-                        <div class="comp-score">56.8%<span class="comp-score-unit"> success</span></div>
-                        <div class="comp-rank" data-i18n="comps.c2.rank">队名「喵喵喵喵而汪之队」· 名次待更新</div>
-                    </div>
-                    <p data-i18n="comps.c2.desc">
-                        微调 6B 视觉-语言-动作（VLA）模型 50k 步（单卡 RTX 6000D，BF16，约 57 小时），
-                        50 任务 × 20 episodes 评测成功率 56.8%（568/1000）；
-                        分析任务得分双峰分布，提出双臂低分任务过采样的改进方向。
-                    </p>
-                    <div class="proj-tags">
-                        <span>VLA · 6B</span><span>50k steps</span><span>RoboTwin</span><span>BF16</span>
-                    </div>
-                </article>
-
-                <article class="comp-card">
-                    <div class="tape"></div>
-                    <div class="hand-note">baseline &rarr; LoRA!</div>
-                    <div class="comp-head">
-                        <h3 data-i18n="comps.c3.title">Name That LLM</h3>
-                        <span class="comp-plat">Kaggle</span>
-                    </div>
-                    <div class="comp-score-row">
-                        <div class="comp-score">0.305<span class="comp-score-unit"> balanced accuracy</span></div>
-                        <div class="comp-rank" data-i18n="comps.c3.rank">LB 0.305 · 名次待更新</div>
-                    </div>
-                    <p data-i18n="comps.c3.desc">
-                        Kaggle Code Competition：18 分类判断文本出自哪个 LLM。
-                        完成 StratifiedGroupKFold TF-IDF + 逻辑回归基线（LB 0.305），
-                        正在训练 Qwen3-1.7B + LoRA (r=16) 分类头，捕捉 n-gram 无法覆盖的文体指纹。
-                    </p>
-                    <div class="proj-tags">
-                        <span>TF-IDF</span><span>LoRA r=16</span><span>Qwen3-1.7B</span><span>18-class</span>
-                    </div>
-                </article>
-
             </div>
         </section>
 
