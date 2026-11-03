@@ -8,7 +8,7 @@ const i18n = {
         'nav.projects': '研究项目',
         'nav.comps': '比赛',
         'nav.contact': '联系',
-        'theme.light': '浅色',
+        'theme.light': '暖色',
         'theme.dark': '深色',
         'hero.desc': '2026-2027 学年入读宁波诺丁汉大学 ECCE 硕士项目。本科毕业于山东农业大学数据科学与大数据技术专业。研究兴趣涵盖计算机视觉、大语言模型及自动驾驶车辆控制。',
         'hero.projects': '查看研究项目 ↗',
@@ -53,7 +53,7 @@ const i18n = {
         'tag.editing': '剪辑',
         'tag.shortvideo': '短视频',
         'tag.data': '数据驱动',
-        'comps.title': '过往比赛',
+        'comps.title': '近期比赛',
         'comps.c1.title': '大模型复杂表格识别与内容理解',
         'comps.c1.rank': '天池排行榜在榜 · 名次待更新',
         'comps.c1.desc': '知乎知学堂大模型挑战赛。908 道真实表格题（结构恢复 / 内容提取 / 数值推理），设计并落地 Qwen 系多模型交叉验证投票管线：3 票一致安全替换 + 最大模型仲裁分歧，22 次提交迭代至 79.40 分。',
@@ -74,7 +74,7 @@ const i18n = {
         'nav.projects': 'Research',
         'nav.comps': 'Competitions',
         'nav.contact': 'Contact',
-        'theme.light': 'Light',
+        'theme.light': 'Warm',
         'theme.dark': 'Dark',
         'hero.desc': "Starting MSc ECCE at UNNC (2026-2027). BSc in Big Data from Shandong Agricultural University. Research interests: computer vision, LLMs, and autonomous vehicle control.",
         'hero.projects': 'View Research ↗',
@@ -119,7 +119,7 @@ const i18n = {
         'tag.editing': 'Editing',
         'tag.shortvideo': 'Short Video',
         'tag.data': 'Data-Driven',
-        'comps.title': 'Past Competitions',
+        'comps.title': 'Recent Competitions',
         'comps.c1.title': 'Complex Table Recognition & Content Understanding',
         'comps.c1.rank': 'On Tianchi leaderboard · rank TBD',
         'comps.c1.desc': 'Zhihu Knowledge Cup LLM challenge. 908 real-world table questions (structure recovery / extraction / numerical thinking). Designed a multi-model cross-validation voting pipeline over the Qwen family — 3-vote unanimity + max-model arbitration — iterated through 22 submissions to 79.40 / 100.',
@@ -227,7 +227,7 @@ function updateThemeBtn() {
     const lang = document.body.dataset.lang === 'en' ? 'en' : 'zh';
     const toLight = document.body.dataset.theme === 'dark';
     if (label) label.textContent = toLight ? i18n[lang]['theme.light'] : i18n[lang]['theme.dark'];
-    if (icon) icon.textContent = toLight ? '☀' : '🌙';
+    if (icon) icon.textContent = toLight ? '✦' : '🌙';
 }
 
 // ===== Slide-in (section content enters from lower-left on scroll) =====

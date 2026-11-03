@@ -18,23 +18,23 @@
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Light theme */
+/* Warm dark theme (styled alternative) */
 body[data-theme="light"] {
-    --bg: #f6f8fa;
-    --bg-elevated: #ffffff;
-    --bg-card: #ffffff;
-    --border: #d0d7de;
-    --text: #1f2328;
-    --text-dim: #57606a;
-    --text-muted: #6e7781;
-    --accent: #0969da;
-    --accent-glow: rgba(9, 105, 218, 0.2);
-    --accent-green: #1a7f37;
-    --accent-purple: #8250df;
-    --bar-bg: #eaeef2;
-    --bar-fill: linear-gradient(90deg, #0969da, #1a7f37);
-    --code-bg: #f6f8fa;
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --bg: #191512;
+    --bg-elevated: #201b16;
+    --bg-card: #262019;
+    --border: #3a3229;
+    --text: #ede4d3;
+    --text-dim: #b3a68f;
+    --text-muted: #857865;
+    --accent: #d9a662;
+    --accent-glow: rgba(217, 166, 98, 0.22);
+    --accent-green: #a3b18a;
+    --accent-purple: #c6a3c0;
+    --bar-bg: #2c261e;
+    --bar-fill: linear-gradient(90deg, #d9a662, #a3b18a);
+    --code-bg: #12100d;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 /* ===== Reset ===== */
@@ -51,6 +51,8 @@ html {
 body {
     font-family: 'Inter', -apple-system, sans-serif;
     background: var(--bg);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1.5px);
+    background-size: 26px 26px;
     color: var(--text);
     line-height: 1.7;
     transition: background 0.3s, color 0.3s;
