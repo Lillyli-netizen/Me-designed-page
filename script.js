@@ -187,6 +187,7 @@ const themeBtn = document.getElementById('themeToggle');
 
 function applyLang(lang) {
     document.body.dataset.lang = lang;
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
     document.title = lang === 'zh' ? 'Olivia Li · 李月艺' : 'Olivia Li';
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
