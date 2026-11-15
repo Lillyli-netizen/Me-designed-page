@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="style.css?v=10">
 </head>
 
 <body data-theme="dark" data-lang="zh">
@@ -196,19 +196,19 @@
 
                 <article class="comp-card">
                     <div class="tape"></div>
-                    <div class="hand-note">best of 22 submissions!</div>
+                    <div class="hand-note">season 2 &middot; rank 102</div>
                     <div class="comp-head">
                         <h3 data-i18n="comps.c1.title">大模型复杂表格识别与内容理解</h3>
                         <span class="comp-plat">Tianchi</span>
                     </div>
                     <div class="comp-score-row">
-                        <div class="comp-score">79.40<span class="comp-score-unit"> / 100</span></div>
-                        <div class="comp-rank" data-i18n="comps.c1.rank">排行榜在榜 · 名次待更新</div>
+                        <div class="comp-score">81.9<span class="comp-score-unit"> / 100</span></div>
+                        <div class="comp-rank" data-i18n="comps.c1.rank">第二赛季 · 当前第 102 名</div>
                     </div>
                     <p data-i18n="comps.c1.desc">
                         知乎知学堂大模型挑战赛。908 道真实表格题（结构恢复 / 内容提取 / 数值推理），
                         设计并落地 Qwen 系多模型交叉验证投票管线：3 票一致安全替换 + 最大模型仲裁分歧，
-                        22 次提交迭代至 79.40 分。
+                        22 次提交迭代至 81.9 分（第二赛季，当前第 102 名）。
                     </p>
                     <div class="proj-tags">
                         <span>Qwen3.8-Max</span><span>Voting Pipeline</span><span>JSON Recovery</span><span>908
@@ -239,19 +239,19 @@
 
                 <article class="comp-card">
                     <div class="tape"></div>
-                    <div class="hand-note">baseline &rarr; LoRA!</div>
+                    <div class="hand-note">0.305 &rarr; 0.691</div>
                     <div class="comp-head">
                         <h3 data-i18n="comps.c3.title">Name That LLM</h3>
                         <span class="comp-plat">Kaggle</span>
                     </div>
                     <div class="comp-score-row">
-                        <div class="comp-score">0.305<span class="comp-score-unit"> balanced accuracy</span></div>
-                        <div class="comp-rank" data-i18n="comps.c3.rank">LB 0.305 · 名次待更新</div>
+                        <div class="comp-score">0.691<span class="comp-score-unit"> balanced accuracy</span></div>
+                        <div class="comp-rank" data-i18n="comps.c3.rank">LB 0.691 · 银牌区间</div>
                     </div>
                     <p data-i18n="comps.c3.desc">
                         Kaggle Code Competition：18 分类判断文本出自哪个 LLM。
-                        完成 StratifiedGroupKFold TF-IDF + 逻辑回归基线（LB 0.305），
-                        正在训练 Qwen3-1.7B + LoRA (r=16) 分类头，捕捉 n-gram 无法覆盖的文体指纹。
+                        从 StratifiedGroupKFold TF-IDF + 逻辑回归基线（LB 0.305）迭代到基于开源 LLM 似然打分的方案，
+                        当前 LB 0.691，处在银牌区间。
                     </p>
                     <div class="proj-tags">
                         <span>TF-IDF</span><span>LoRA r=16</span><span>Qwen3-1.7B</span><span>18-class</span>
@@ -383,7 +383,7 @@
 
     </main>
 
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=10"></script>
 </body>
 
 </html>
