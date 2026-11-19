@@ -1,0 +1,114 @@
+{
+  "grid": [
+    [
+      "Lab",
+      "Equipment",
+      "Count"
+    ],
+    [
+      "Optics",
+      "Lenses",
+      "4"
+    ],
+    [
+      "",
+      "Polarizers",
+      "2"
+    ],
+    [
+      "Electronics",
+      "Oscilloscopes",
+      "1"
+    ]
+  ],
+  "cells": [
+    {
+      "row": 0,
+      "column": 0,
+      "text": "Lab",
+      "kind": "th",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "text": "Equipment",
+      "kind": "th",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "text": "Count",
+      "kind": "th",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "text": "Optics",
+      "kind": "th",
+      "rowspan": 2,
+      "colspan": 1
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "text": "Lenses",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "text": "4",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "text": "Polarizers",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "text": "2",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 3,
+      "column": 0,
+      "text": "Electronics",
+      "kind": "th",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "text": "Oscilloscopes",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "text": "1",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    }
+  ]
+}

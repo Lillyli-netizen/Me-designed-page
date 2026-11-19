@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Try Table Grid on a sample or paste HTML to expand merged table cells into CSV or JSON.">
+  <title>Table Grid · HTML table to CSV or JSON</title>
+  <link rel="stylesheet" href="assets/demo.css">
+  <script src="assets/demo.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <a class="brand" href="https://github.com/Lillyli-netizen/table-grid-cli">Olivia Li / Table Grid</a>
+      <h1>HTML tables to tidy grids.</h1>
+      <p>Expand merged cells into CSV, or export a JSON grid with the original cell positions and spans. The conversion runs in your browser.</p>
+    </header>
+    <section aria-label="Table converter">
+      <div class="toolbar">
+        <label>Example
+          <select id="example">
+            <option value="experiment">Two-level header</option>
+            <option value="inventory">Row groups</option>
+          </select>
+        </label>
+        <label>Format
+          <select id="format"><option value="csv">CSV</option><option value="json">JSON</option></select>
+        </label>
+        <label>Merged cells
+          <select id="fill"><option value="repeat">Repeat value</option><option value="blank">Leave covered cells blank</option></select>
+        </label>
+        <button id="run" type="button" disabled>Convert table</button>
+      </div>
+      <div class="panes">
+        <label>HTML input<textarea id="source" spellcheck="false"></textarea></label>
+        <label><span id="result-label">CSV output</span><textarea id="result" readonly spellcheck="false"></textarea></label>
+      </div>
+      <footer>
+        <p id="status" role="status" aria-live="polite">Loading example…</p>
+        <button id="copy" type="button" disabled>Copy output</button>
+      </footer>
+    </section>
+    <p class="links"><a href="https://github.com/Lillyli-netizen/table-grid-cli#quickstart">CLI quickstart</a><a href="https://github.com/Lillyli-netizen/table-grid-cli">View or star on GitHub ↗</a></p>
+  </main>
+</body>
+</html>
