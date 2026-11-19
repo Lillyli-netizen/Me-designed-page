@@ -168,6 +168,10 @@ def expand_table(source, table=1, fill="repeat"):
 
 def convert(source, table=1, fill="repeat", output_format="csv"):
     grid, placements = expand_table(source, table, fill)
+    return format_output(grid, placements, output_format)
+
+
+def format_output(grid, placements, output_format):
     if output_format == "json":
         return json.dumps(
             {"grid": grid, "cells": [asdict(cell) for cell in placements]},

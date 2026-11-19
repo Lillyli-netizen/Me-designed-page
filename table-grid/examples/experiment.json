@@ -1,0 +1,106 @@
+{
+  "grid": [
+    [
+      "Model",
+      "Validation",
+      "Validation"
+    ],
+    [
+      "Model",
+      "Precision",
+      "Recall"
+    ],
+    [
+      "Baseline",
+      "0.82",
+      "0.76"
+    ],
+    [
+      "Revision A",
+      "0.88",
+      "0.84"
+    ]
+  ],
+  "cells": [
+    {
+      "row": 0,
+      "column": 0,
+      "text": "Model",
+      "kind": "th",
+      "rowspan": 2,
+      "colspan": 1
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "text": "Validation",
+      "kind": "th",
+      "rowspan": 1,
+      "colspan": 2
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "text": "Precision",
+      "kind": "th",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "text": "Recall",
+      "kind": "th",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "text": "Baseline",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "text": "0.82",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "text": "0.76",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 3,
+      "column": 0,
+      "text": "Revision A",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "text": "0.88",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "text": "0.84",
+      "kind": "td",
+      "rowspan": 1,
+      "colspan": 1
+    }
+  ]
+}

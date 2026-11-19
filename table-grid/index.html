@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Try Table Grid on a sample or paste HTML to expand merged table cells into CSV or JSON.">
   <title>Table Grid · HTML table to CSV or JSON</title>
-  <link rel="stylesheet" href="assets/demo.css">
-  <script src="assets/demo.js" defer></script>
+  <link rel="stylesheet" href="assets/demo.css?v=2">
+  <script src="assets/demo.js?v=2" defer></script>
 </head>
 <body>
   <main>
     <header>
       <a class="brand" href="https://github.com/Lillyli-netizen/table-grid-cli">Olivia Li / Table Grid</a>
-      <h1>HTML tables to tidy grids.</h1>
-      <p>Expand merged cells into CSV, or export a JSON grid with the original cell positions and spans. The conversion runs in your browser.</p>
+      <h1>Convert HTML tables to CSV or JSON</h1>
+      <p>Expand merged cells and see where each value lands. Conversion runs in your browser.</p>
     </header>
     <section aria-label="Table converter">
       <div class="toolbar">
@@ -32,12 +32,30 @@
         <button id="run" type="button" disabled>Convert table</button>
       </div>
       <div class="panes">
-        <label>HTML input<textarea id="source" spellcheck="false"></textarea></label>
-        <label><span id="result-label">CSV output</span><textarea id="result" readonly spellcheck="false"></textarea></label>
+        <label><span class="input-label">HTML input</span><textarea id="source" spellcheck="false"></textarea></label>
+        <div class="output">
+          <div class="output-heading">
+            <span id="result-label">CSV output</span>
+            <div class="view-controls" role="group" aria-label="Output view">
+              <button id="show-preview" type="button" aria-pressed="true" aria-controls="preview">Preview</button>
+              <button id="show-raw" type="button" aria-pressed="false" aria-controls="result">Raw output</button>
+            </div>
+          </div>
+          <div id="preview" class="grid-preview" role="region" aria-label="Converted table preview" tabindex="0">
+            <table id="grid" aria-label="Converted table" hidden></table>
+            <p id="empty-grid">Loading example…</p>
+          </div>
+          <textarea id="result" aria-labelledby="result-label" readonly spellcheck="false" hidden></textarea>
+          <p id="grid-meta" class="grid-meta"></p>
+          <p id="grid-key" class="grid-key" hidden>Highlighted cells are covered by a merge.</p>
+        </div>
       </div>
       <footer>
         <p id="status" role="status" aria-live="polite">Loading example…</p>
-        <button id="copy" type="button" disabled>Copy output</button>
+        <div class="export-actions">
+          <button id="copy" type="button" disabled>Copy output</button>
+          <button id="download" type="button" disabled>Download CSV</button>
+        </div>
       </footer>
     </section>
     <p class="links"><a href="https://github.com/Lillyli-netizen/table-grid-cli#quickstart">CLI quickstart</a><a href="https://github.com/Lillyli-netizen/table-grid-cli">View or star on GitHub ↗</a></p>
