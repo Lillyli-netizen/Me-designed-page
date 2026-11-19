@@ -708,10 +708,23 @@ body {
     }
 
     .sidebar-footer {
+        position: static;
+        left: auto;
+        right: auto;
+        bottom: auto;
         display: flex;
         align-items: center;
         gap: 6px;
         margin-left: 8px;
+        padding-top: 0;
+        border-top: none;
+        flex-shrink: 0;
+    }
+
+    .lang-toggle,
+    .theme-toggle {
+        width: auto;
+        padding: 8px 10px;
     }
 
     .sidebar-footer .toggle-label {
