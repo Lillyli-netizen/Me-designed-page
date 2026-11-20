@@ -1,0 +1,36 @@
+[
+  {
+    "step": 5000,
+    "directory": "global_step_5000",
+    "pinned": false,
+    "missing_state": [],
+    "inference": "file checks passed",
+    "issues": [],
+    "fixture_bytes": 326
+  },
+  {
+    "step": 10000,
+    "directory": "global_step_10000",
+    "pinned": false,
+    "missing_state": [
+      "extra_state",
+      "model",
+      "optimizer"
+    ],
+    "inference": "issues",
+    "issues": [
+      "model-00001.safetensors: payload size disagrees with the header",
+      "model-00002.safetensors: file is missing"
+    ],
+    "fixture_bytes": 186
+  },
+  {
+    "step": 15000,
+    "directory": "global_step_15000",
+    "pinned": true,
+    "missing_state": [],
+    "inference": "file checks passed",
+    "issues": [],
+    "fixture_bytes": 326
+  }
+]

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Two small experiments on checkpoint inspection and action-label alignment.">
+  <title>Training Labs · Olivia Li</title>
+  <link rel="stylesheet" href="lab.css">
+  <script src="lab.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="byline"><a href="https://github.com/Lillyli-netizen">Olivia Li</a></p>
+      <h1>Training Labs</h1>
+      <p class="intro">Check what landed on disk. Then see what one frame of label lag can do to a policy.</p>
+      <nav aria-label="Labs">
+        <a href="#checkpoints">Checkpoint inspection</a>
+        <a href="#alignment">Action-label alignment</a>
+      </nav>
+    </header>
+
+    <section id="checkpoints" aria-labelledby="checkpoint-heading">
+      <h2 id="checkpoint-heading">Checkpoint inspection</h2>
+      <p>The CLI checks whether expected training state files exist and whether a Hugging Face export has its indexed weight shards. The report below comes from three synthetic checkpoints.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Checkpoint report table">
+        <table>
+          <thead><tr><th scope="col">Step</th><th scope="col">Training state</th><th scope="col">Inference export</th></tr></thead>
+          <tbody id="checkpoints-body"></tbody>
+        </table>
+      </div>
+      <p id="disk-load" role="status">Loading the fixture report…</p>
+
+      <div class="budget">
+        <h3>Estimate disk headroom</h3>
+        <div class="budget-fields">
+          <label for="free">Free space (GiB)<input id="free" type="number" min="0" max="100000" step="any" value="120"></label>
+          <label for="next">Space per save (GiB)<input id="next" type="number" min="0.01" max="100000" step="any" value="74"></label>
+        </div>
+        <p id="capacity" role="status"></p>
+        <p class="quiet">The calculator uses hypothetical sizes. The fixture files are tiny. Confirm loadability in your training framework before using a checkpoint.</p>
+      </div>
+
+      <div class="actions">
+        <a href="checkpoint_inspect.py" download>Download the Python CLI</a>
+        <a href="make_checkpoint_fixture.py" download>Download the fixture generator</a>
+      </div>
+      <pre><code>python make_checkpoint_fixture.py ./sample-run
+python checkpoint_inspect.py ./sample-run --pin 15000 --next-gib 74</code></pre>
+    </section>
+
+    <section id="alignment" aria-labelledby="alignment-heading">
+      <h2 id="alignment-heading">Action-label alignment</h2>
+      <p>Compare four label offsets on two kinds of synthetic trajectories. Within each trajectory type, the offsets use the same held-out episodes, policy architecture and optimizer.</p>
+      <div class="experiment-controls">
+        <label for="motion">Trajectory type
+          <select id="motion" disabled>
+            <option value="0">Independent frame states</option>
+            <option value="1">Correlated frame states</option>
+          </select>
+        </label>
+        <p id="motion-note" class="quiet"></p>
+      </div>
+      <div class="chart" aria-label="Held-out masked mean squared error by label offset">
+        <p class="chart-heading">Held-out masked MSE <span class="quiet">Lower is better</span></p>
+        <ol id="bars"></ol>
+        <p id="experiment-details" class="quiet" role="status">Loading experiment results…</p>
+      </div>
+      <p class="quiet">These are measured results from a toy PyTorch policy on synthetic data. In a robot dataset, frame offsets also depend on camera clocks, sampling rates and the action horizon.</p>
+      <div class="actions">
+        <a href="vla_alignment_sweep.py" download>Download the experiment</a>
+        <a href="vla_cpu_lab.py" download>Download the policy and data generator</a>
+      </div>
+      <pre><code>python vla_alignment_sweep.py --trials 5</code></pre>
+    </section>
+  </main>
+</body>
+</html>
